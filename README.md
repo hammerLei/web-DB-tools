@@ -2,7 +2,7 @@
 
 ### 体验地址 demo
 * [http://www.201314.art/](http://www.201314.art/)
-* 账号密码  feifei/feifei123
+* 账号密码  feifei/123456
 
 # 简介
 * 一个web版数据库执行工具,而且写sql有提示,关键字和表名提示,没有字段提示.
