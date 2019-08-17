@@ -55,7 +55,7 @@
 # 部署说明
 * 服务器下基础java环境请自行配置
 * feature目录中包含该服务用户建表SQL及nginx配置
-* deploy 成jar包
+* mvn package成jar包
 * 项目目录下主要包含这些文件和目录 conf  homethy-site-database-1.0-SNAPSHOT.jar  log  logs  restart.sh
 * conf目录对象项目中的conf目录,里面文件内容打开看便知
 * restart.sh 脚本如下,自行修改路径和端口
