@@ -8,17 +8,79 @@
     <link href="/lib/animate/animate.min.css" rel="stylesheet"/>
     <link href="/lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
     <link href="/lib/winui/css/winui.css" rel="stylesheet"/>
-    <script>
-        /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
-    </script>
+    <script type="text/javascript" charset="utf-8" async="" src="https://l2dwidget.js.org/lib/L2Dwidget.0.min.js"></script>
+
     <style>
         body {
             /*在页面顶部加载背景最佳，如有必要这块可以从数据库读取*/
             background-image: url(/images/bg_01.jpg);
         }
+        canvas#live2dcanvas {
+            border: 0 !important;
+            right 0: ;
+        }
+    </style>
+    <style>
+        .live2d-widget-dialog-container {
+            width: 300px;
+            height: 120px;
+            position: absolute;
+            bottom: 65%;
+            right: 0px;
+            transform-origin: right;
+            padding: 12px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+        .live2d-widget-dialog {
+            width: 100%;
+            height: 100%;
+            color: #917159;
+            font-size: 16px;
+            padding: 12px;
+            border: 2px solid rgb(236, 203, 180);
+            background: rgb(252, 248, 244);
+            box-sizing: border-box;
+            border-radius: 10px;
+            transform: rotate(-2deg);
+            opacity: 0;
+            transition: 200ms opacity;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+            animation: live2d-widget-dialog-tingle 4s ease-in-out 0s infinite alternate;
+        }
+        @keyframes live2d-widget-dialog-tingle {
+            0% { transform: translate(-1px, 1.5px) rotate(-2deg); }
+            100% { transform: translate(1px, -1.5px) rotate(2deg); }
+        }
     </style>
 </head>
 <body>
+
+<script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    L2Dwidget
+        .on('*', (name) => {
+        console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+    })
+    .init({
+        dialog: {
+            // 开启对话框
+            enable: true,
+            script: {
+                // 每空闲 10 秒钟，显示一条一言
+                'every idle 10s': '$hitokoto$',
+                // 当触摸到星星图案
+                // 'hover .star': '星星在天上而你在我心里 (*/ω＼*)',
+                // 当触摸到角色身体
+                'tap body': '哎呀！别碰我！',
+                // 当触摸到角色头部
+                'tap face': '人家已经不是小孩子了！'
+            }
+        }
+    });
+</script>
+
+
 <!-- 桌面 -->
 <div class="winui-desktop">
 

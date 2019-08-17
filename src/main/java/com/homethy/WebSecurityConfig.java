@@ -90,12 +90,12 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter {
 
         session.setAttribute(SESSION_KEY, user);
         //密码超过周期修改,跳转到修改密码页，使用初始密码的也跳转到修改密码页
-        if(!isUpdatePassword(request) && ((user.getLastUpdatePasswordTime()!=null && user.getUpdatePasswordinterval()>=PASSWORD_UPDATE_CYCLE) || "6a8c2125406ca9963fcd2aec1578155a".equals(user.getPassword()))){
-          // 跳转登录
-          String url = "/update_password";
-          response.sendRedirect(url);
-          return false;
-        }
+//        if(!isUpdatePassword(request) && ((user.getLastUpdatePasswordTime()!=null && user.getUpdatePasswordinterval()>=PASSWORD_UPDATE_CYCLE) || "6a8c2125406ca9963fcd2aec1578155a".equals(user.getPassword()))){
+//          // 跳转登录
+//          String url = "/update_password";
+//          response.sendRedirect(url);
+//          return false;
+//        }
         return true;
       }
 
