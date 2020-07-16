@@ -1,7 +1,7 @@
 # web-DB-tools
 
 ### 体验地址 demo
-* [http://www.chime.ltd/](http://www.chime.ltd/)
+* [http://www.chime.ltd/](http://39.107.109.109:20101/)
 * 账号密码  feifei/123456
 
 # 简介
