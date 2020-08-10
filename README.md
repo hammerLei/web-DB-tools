@@ -56,20 +56,21 @@
 * 服务器下基础java环境请自行配置
 * feature目录中包含该服务用户建表SQL及nginx配置
 * mvn package成jar包
-* 项目目录下主要包含这些文件和目录 conf  homethy-site-database-1.0-SNAPSHOT.jar  log  logs  restart.sh
+* 项目目录下主要包含这些文件和目录 conf  dbTool-site-database-1.0-SNAPSHOT.jar  log  logs  restart.sh
 * conf目录对象项目中的conf目录,里面文件内容打开看便知
 * restart.sh 脚本如下,自行修改路径和端口
 ``` 
 #!/bin/bash
 
-jar_file=homethy-site-database-1.0-SNAPSHOT.jar
+jar_file=dbTool-site-database-1.0-SNAPSHOT.jar
 prot_file='Dserver.port=20101'
 
 kill -9 `ps aux|grep $jar_file | grep $prot_file | grep java | grep -v grep | awk '{print $2}'`
 
 echo "---------------------------kill done--------------------------------"
 
-java -jar -Dserver.port=20101 -Dchime.application.name=site -Dspring.profiles.active=test homethy-site-database-1.0-SNAPSHOT.jar >> $(pwd)/log/catalina-$(date +%Y-%m-%d).log &
+java -jar -Dserver.port=20101 -Dchime.application.name=site -Dspring.profiles.active=test 
+dbTool-site-database-1.0-SNAPSHOT.jar >> $(pwd)/log/catalina-$(date +%Y-%m-%d).log &
 
 echo "restart success!"
 ``` 

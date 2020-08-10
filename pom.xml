@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.homethy.site.database</groupId>
-    <artifactId>homethy-site-database</artifactId>
+    <groupId>com.dbTool.site.database</groupId>
+    <artifactId>dbTool-site-database</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -15,7 +15,7 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 
-    <name>homethy-site-database</name>
+    <name>dbTool-site-database</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -28,7 +28,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.homethy.App</mainClass>
+                    <mainClass>com.dbTool.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>
@@ -143,6 +143,16 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3</version>
+        </dependency>
 
         <!-- Spring Boot Web 依赖 -->
         <dependency>
@@ -230,45 +240,6 @@
             <version>2.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.homethy</groupId>
-            <artifactId>homethy-util</artifactId>
-            <version>1.5.5-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.homethy</groupId>
-                    <artifactId>homethy-websecurity-util</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.homethy</groupId>
-                    <artifactId>homethy-configcenter-client</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>com.homethy</groupId>
-            <artifactId>homethy-http-api-client</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -277,6 +248,22 @@
             <type>pom</type>
         </dependency>
 
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.5.6</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcomponents-asyncclient</artifactId>

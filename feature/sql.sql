@@ -157,9 +157,6 @@ create table user_group
 )
   comment '用户组对应关系表';
 
-INSERT INTO db_tool.database_user_info (id, account, password, last_login_time, create_time, update_time, level, last_login_ip, last_update_password_time, version, email, online_level, status, default_schema, after_login_redirect) VALUES (2, 'feifei', 'd93f5e64123141a1de4602cb1909f397', '2018-09-29 16:19:46', '2017-10-12 11:20:42', '2018-09-28 23:26:39', 0, '127.0.0.1', '2018-09-28 23:26:39', 1, '463367527@qq.com', 0, 1, 'db_test1', '/winUi/index');
-INSERT INTO db_tool.database_user_info (id, account, password, last_login_time, create_time, update_time, level, last_login_ip, last_update_password_time, version, email, online_level, status, default_schema, after_login_redirect) VALUES (1, 'feifei.lei', '12aca0384a6981abfc0a3d096e6b11d4', '2018-10-30 11:50:42', '2017-10-12 11:20:42', '2018-10-22 14:20:38', 9, '127.0.0.1', '2018-10-22 14:20:38', 4, 'feifei@qq.com', 9, 1, 'db_test1', '/winUi/index');
-
 
 
 

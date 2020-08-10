@@ -7,7 +7,7 @@
 </video>
 <div class="video_mask"></div>
 <div class="login">
-    <h1>Chimeinc DB</h1>
+    <h1>Web DB Demo</h1>
     <div class="layui-form">
         <div class="layui-form-item">
             <input class="layui-input" name="username" placeholder="用户名" id="username" lay-verify="required" type="text" autocomplete="off">
@@ -25,5 +25,7 @@
         <button class="layui-btn login_btn" lay-submit="" id="login">登录</button>
     </div>
 </div>
+<div class="copyright-item" style="
+position: fixed;bottom: 2px;z-index: 99;background-color: rgba(165, 169, 169, 0.99);width: 100%;text-align: center;"><a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备18027189号-2</a></div>
 <div hidden="true" page-id="databse-login-page"></div>
 </@webpage>
